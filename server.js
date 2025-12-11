@@ -16,7 +16,7 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-frontend-url.vercel.app'] 
+    ? ['https://1-mind-full-stack-frontend-5zoj.vercel.app/'] 
     : ['http://localhost:3000', 'http://localhost:5173'],
   credentials: true
 }));
