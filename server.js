@@ -14,10 +14,11 @@ const complaintRoutes = require('./src/routes/complaints');
 const app = express();
 
 // Middleware
+const cors = require('cors');
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://1-mind-full-stack-frontend-5zoj.vercel.app/'] 
-    : ['http://localhost:3000', 'http://localhost:5173'],
+  origin: 'https://1-mind-full-stack-frontend-5zoj.vercel.app/',
+  credentials: true
+}));
   credentials: true
 }));
 app.use(express.json({limit: '50mb'}));
